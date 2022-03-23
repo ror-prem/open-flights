@@ -24,7 +24,7 @@ const Airline = () => {
     overflow: scroll;
 
     &:last-child {
-      background: #000;
+      background: #febf6e;
     }
   `
   const Main = styled.div`
@@ -44,7 +44,8 @@ const Airline = () => {
   },[])
   
   const handleChange = (e) =>{
-
+    e.preventDefault()
+    console.log('name:', e.target.name, 'value', e.target.value)
   }
 
   const handleSubmit = (e) => {

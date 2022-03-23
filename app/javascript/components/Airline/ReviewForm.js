@@ -5,14 +5,14 @@ const ReviewForm = (props) => {
     <div className='wrapper'>
 
       <form onSubmit={props.handleSubmit}>
-        <div>Have an experience with [AirlineName]? Share your review!</div>
+        <div>Have an experience with {props.attributes?.name} ? Share your review!</div>
 
         <div className='field'>
-          <input onChange={} type='text' name='title' placeholder='Review Title'></input>
+          <input onChange={props.handleChange} value={props.review.title} type='text' name='title' placeholder='Review Title'/>
         </div>
 
         <div className='field'>
-          <input type='text' name='description' placeholder='Description'></input>
+          <input onChange={props.handleChange} value={props.review.description} type='text' name='description' placeholder='Review Description'/>
         </div>
 
         <div className='field'>
